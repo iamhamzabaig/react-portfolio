@@ -100,8 +100,8 @@ function Profile() {
           {skills.map((skill) => (
             <div key={skill.skillTitle} className="space-y-1">
               <div className="flex justify-between items-center">
-                <span className="text-[0.8rem]">{skill.skillTitle}</span>
-                <span className="text-[0.8rem]">{skill.percentage}%</span>
+                <span className="text-[0.7rem]">{skill.skillTitle}</span>
+                <span className="text-[0.7rem]">{skill.percentage}%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1  dark:bg-gray-700 border-2 border-orangetxt">
                 <div
