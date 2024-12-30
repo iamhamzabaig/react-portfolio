@@ -1,10 +1,20 @@
-import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import "./App.css";
+import Header from "./components/Header/Header";
+import Profile from "./components/Profile/Profile";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="dark:bg-slate-900 min-h-screen">
-      <h1 class="text-3xl font-bold underline">Hello world!</h1> <ThemeToggle />
+    <div className="bg-lightBg dark:bg-darkBg min-h-screen grid grid-cols-12 gap-x-9 transition-all ease-in-out duration-400">
+      <div className="sm:col-span-2">
+        <Profile />
+      </div>
+      <div className="sm:col-span-9">
+        <Home />
+      </div>
+      <div className="sm:col-span-1">
+        <Header />
+      </div>
     </div>
   );
 }
