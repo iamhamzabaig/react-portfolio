@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaLinkedin, FaGithub, FaGoogle } from "react-icons/fa";
+import Button from "../Button/Button";
 
 function Profile() {
   const icons = [
@@ -112,6 +113,8 @@ function Profile() {
             </div>
           ))}
         </div>
+        <div className="border-t border-gray-300 w-1/2 mx-auto my-3"></div>
+        <Button label={"Download"} icon={"download"} />
       </div>
     </>
   );

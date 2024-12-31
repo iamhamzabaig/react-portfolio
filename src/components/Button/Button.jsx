@@ -1,38 +1,19 @@
 import React from "react";
-import styled from "styled-components";
-import { ArrowRightIcon } from "@heroicons/react/24/solid"; // Import a Heroicon
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 
-const StyledButton = styled.button`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #4f46e5; /* Indigo-600 */
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+function Button({ label, icon }) {
+  let IconComponent;
 
-  &:hover {
-    background-color: #4338ca; /* Indigo-700 */
+  if (icon === "download") {
+    IconComponent = ArrowDownTrayIcon;
   }
 
-  svg {
-    width: 1.25rem; /* Icon size */
-    height: 1.25rem;
-  }
-`;
-
-const Button = ({ label, onClick }) => {
   return (
-    <StyledButton onClick={onClick}>
+    <button className="bg-orangetxt px-12 py-2 border-none outline-offset-2 outline-orange-400 outline-2 focus:outline flex items-center gap-2">
       {label}
-      <ArrowRightIcon />
-    </StyledButton>
+      {IconComponent && <IconComponent className="w-5 h-5" />}
+    </button>
   );
-};
+}
 
 export default Button;
